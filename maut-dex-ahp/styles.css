@@ -1,0 +1,72 @@
+.tf-tree .tf-nc {
+  border-radius: 3px;
+  width: auto;
+  height: auto;
+  background-color: rgb(146, 226, 250);
+  border: none;
+}
+
+.tf-tree .tf-nc:before,
+.tf-tree .tf-nc:after {
+  border-left-color: rgb(146, 226, 250);
+  border-left-width: 4px;
+}
+
+.tf-tree li li:before {
+  border-top-color: rgb(146, 226, 250);
+  border-top-width: 4px;
+}
+.nodeContent input {
+  border: none;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem;
+}
+.nodeContent input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.nodeContent select {
+  border: none;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem;
+}
+.nodeContent select:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.tf-tree .addButton {
+  background-color: rgba(137, 200, 202, 0.733);
+  cursor: pointer;
+}
+.tf-tree .addButton:hover {
+  background-color: rgb(146, 226, 250);
+}
+.nodeContentButton {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.fas {
+  color: white;
+  font-size: 1.3rem;
+  padding: 10px;
+  cursor: pointer;
+}
+.fas:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.result {
+  font-size: 1.5rem;
+  text-align: center;
+}
+#bestAlternatives {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: green;
+}

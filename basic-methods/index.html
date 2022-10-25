@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--MetaData-->
+    <meta charset="utf-8" />
+    <title>Basic decision methods</title>
+    <meta name="description" content="Osnovne metode odločanja" />
+    <meta name="author" content="Saša Vinčić" />
+
+    <!--BootStrap-->
+    <link rel="stylesheet" href="bootstrap.css" />
+
+    <!--ChartJS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <style>
+      body {
+        font-family: "Courier New", monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid p-5">
+      <div class="row">
+        <div class="col"><h1>Basic decision methods</h1></div>
+      </div>
+      <div class="row mb-5">
+        <div class="col">
+          <p class="my-3">Upload CSV file:</p>
+          <form>
+            <input
+              class="form-control"
+              type="file"
+              id="myFile"
+              name="filename"
+            />
+            <button
+              class="btn btn-primary mt-3"
+              type="button"
+              onclick="evaluateBasicDecisionMethods()"
+            >
+              Evaluate
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="row d-none" id="resultDiv">
+        <div class="col">
+          <ul style="list-style: none; padding-left: 0">
+            <li class="border-0" id="pesimist"></li>
+            <li class="border-0" id="optimist"></li>
+            <li class="border-0" id="laplace"></li>
+            <li class="border-0" id="savage"></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div id="hurwicz">
+            <p><b>HURWICZ: </b></p>
+            <canvas id="hurwiczChart" width="100%" height="50%"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--JavaScript-->
+    <script src="scripts.js"></script>
+  </body>
+</html>

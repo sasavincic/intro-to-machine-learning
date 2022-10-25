@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>K-T Method</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row mb-5">
+        <div class="col">
+          <h1>Kepner-Tregoe Method</h1>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-2">
+          <div class="btn btn-primary" onclick="addParameter()">Add Parameter</div>
+        </div>
+        <div class="col-2">
+          <div class="btn btn-primary" onclick="addAtribute()">Add Atribute</div>
+        </div>
+        <div class="col-2">
+          <div class="btn btn-danger" onclick="resetTable()">Reset</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" id="table">
+          <form id="myForm">
+            <table class="table text-center" id="myTable">
+              <thead>
+                <tr id="myTableHead">
+                  <th scope="col">#</th>
+                  <th scope="col">Parameters</th>
+                  <th scope="col">ParameterWeights</th>
+                  <th scope="col">
+                    <input type="text" id="atributeName1" value="Atriubte name" />
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="myTableBody">
+                <tr id="myTableBodyRow1">
+                  <th scope="row">1</th>
+                  <td><input type="text" id="parameter1" /></td>
+                  <td><input type="number" id="parameter1weight" /></td>
+                  <td><input type="number" id="atribute1row1" /></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr id="myTableFoot"></tr>
+              </tfoot>
+            </table>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" id="calculateButton">
+          <button class="btn btn-success" onclick="main()">Calculate</button>
+        </div>
+      </div>
+      <hr />
+      <div class="row text-center">
+        <div class="col">
+          <canvas id="firstChart" width="80%" height="80%"></canvas>
+        </div>
+        <div class="col">
+          <canvas id="secondChart" width="80%" height="80%"></canvas>
+        </div>
+        <div class="col text-center my-auto" id="extraChart"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

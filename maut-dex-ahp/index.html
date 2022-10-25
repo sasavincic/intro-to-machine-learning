@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--MetaData-->
+    <meta charset="utf-8" />
+    <title>MOS - MAUT</title>
+    <meta name="description" content="" />
+    <meta name="author" content="Saša Vinčić" />
+
+    <!--BootStrap-->
+    <link rel="stylesheet" href="./libraries/bootstrap.min.css" />
+
+    <!--jQuery-->
+    <script src="./libraries/jquery-3.6.0.min.js"></script>
+
+    <!--TreeFlex-->
+    <link href="https://unpkg.com/treeflex/dist/css/treeflex.css" rel="stylesheet" />
+
+    <!--jsChart-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+
+    <!--CSS-->
+    <link href="styles.css" rel="stylesheet" />
+
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="container-fluid p-5">
+      <div class="row">
+        <div class="col">
+          <h1>Metoda MAUT</h1>
+        </div>
+      </div>
+
+      <div class="row my-5">
+        <div class="col">
+          <div class="tf-tree">
+            <ul>
+              <li id="root">
+                <span class="tf-nc">
+                  <span class="nodeContent">
+                    <input class="form-control" type="text" placeholder="Ime" onChange="saveNodeValue(this)" />
+                  </span>
+                </span>
+                <ul>
+                  <li>
+                    <span class="tf-nc addButton" onclick="addAttribute(this)"><span class="nodeContentButton">Dodaj atribut</span></span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-5">
+        <div class="col-3">
+          <button class="btn btn-success" id="drawTableButton" onclick="drawTable()">Izriši tabelo</button>
+        </div>
+        <div class="col-3">
+          <span class="d-none" id="bestAlternatives"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <table class="table">
+            <thead id="tableHead"></thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button class="d-none" id="addAlternativeButton" onclick="addAlternative()">Dodaj alternativo</button>
+          <button class="d-none" id="calculateButton" onclick="returnResult()">Izračunaj</button>
+          <button class="d-none" id="compareAlternativesButton" onclick="drawGraph()">Primerjaj alternative</button>
+          <div class="d-none" id="exportGraphButton" onclick="">Izvozi graf</div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-3"></div>
+        <div class="col-5" id="compareAlternativesParent"></div>
+        <div class="col-3"></div>
+      </div>
+    </div>
+
+    <!--JavaScript-->
+    <script src="./scripts.js"></script>
+    <!--Bootstrap JS-->
+    <script src="./libraries/bootstrap.min.js"></script>
+  </body>
+</html>
